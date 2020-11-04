@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:todo/widgets/task_list.dart';
 
 class TasksScreen extends StatelessWidget {
+  bool checkValue = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,6 +56,7 @@ class TasksScreen extends StatelessWidget {
           ),
           Expanded(
             child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -60,6 +64,7 @@ class TasksScreen extends StatelessWidget {
                   topLeft: Radius.circular(20.0),
                 ),
               ),
+              child: TaskList(),
             ),
           ),
         ],
@@ -67,3 +72,6 @@ class TasksScreen extends StatelessWidget {
     );
   }
 }
+
+
+
